@@ -17,4 +17,4 @@ jobs:
         run: ${{ steps.get_actionlint.outputs.executable }} -color -verbose
         shell: bash
       - run: |
-          echo ${{ github.workflow }}
+          echo ${{ github }}
