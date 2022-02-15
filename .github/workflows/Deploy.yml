@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/**'
+  workflow_dispatch:
 concurrency: ${{ github.workflow }}
 
 jobs:
@@ -22,3 +23,4 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           echo "$GITHUB_CONTEXT"
+          sleep 60
