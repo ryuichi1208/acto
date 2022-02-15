@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/**'
+concurrency: ${{ github.workflow }}
 
 jobs:
   actionlint:
