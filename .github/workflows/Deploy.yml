@@ -16,3 +16,5 @@ jobs:
       - name: Check workflow files
         run: ${{ steps.get_actionlint.outputs.executable }} -color -verbose
         shell: bash
+      - run: |
+          echo ${{ github.workflow }}
